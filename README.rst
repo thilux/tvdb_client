@@ -38,6 +38,7 @@ the exception of those that returns information on the parameters required for c
 The client is very easy to use as provided by the example below:
 
 .. code-block:: python
+
     >>> from tvdb_client import ApiV2Client
     >>> api_client = ApiV2Client('USERNAME', 'API_KEY', 'ACCOUNT_IDENTIFIER')
     >>> api_client.login()
