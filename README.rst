@@ -16,11 +16,8 @@ awesome `python lxml <https://github.com/lxml/lxml>`_.
 Client Classes
 --------------
 
-- **ApiV1Client:** Provides access to TheTVDB V1 APIs which are based on HTTP Get requests with XML based responses. The
-API documentation from TheTVDB can be found `HERE <http://www.thetvdb.com/wiki/index.php/Programmers_API#Dynamic_Interfaces>`_.
-
-- **ApiV2Client:** Provides access to TheTVDB V2 APIs which are all RESTfull JSON APIs. The API information is very well
-documented `HERE <https://api.thetvdb.com/swagger>`_.
+- **ApiV1Client:** Provides access to TheTVDB V1 APIs which are based on HTTP Get requests with XML based responses. The API documentation from TheTVDB can be found `HERE <http://www.thetvdb.com/wiki/index.php/Programmers_API#Dynamic_Interfaces>`_.
+- **ApiV2Client:** Provides access to TheTVDB V2 APIs which are all RESTfull JSON APIs. The API information is very well documented `HERE <https://api.thetvdb.com/swagger>`_.
 
 V1 API Client
 `````````````
