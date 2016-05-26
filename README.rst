@@ -55,7 +55,6 @@ The client is very easy to use as provided by the example below:
       u'banner': u'', u'id': 311939, u'aliases': []}]}
     >>> type(series)
     <type 'dict'>
-    >>>
 
 
 Status and updates
