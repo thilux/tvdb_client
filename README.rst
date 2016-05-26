@@ -8,8 +8,8 @@ The tvdb_client library will provide different client classes for the V1 and V2 
 very different conceptually and technically (V1 is HTTP Get request based with XML response, while V2 is all RESTful JSON
 based).
 
-This library is powered by the fantastic `python Requests library <https://github.com/kennethreitz/requests>` and the
-awesome `python lxml <https://github.com/lxml/lxml>`.
+This library is powered by the fantastic `python Requests library <https://github.com/kennethreitz/requests>`_ and the
+awesome `python lxml <https://github.com/lxml/lxml>`_.
 
 **tvdb_client is not supported nor endorsed by TheTVDB.**
 
@@ -18,9 +18,9 @@ Client Classes
 
 - **ApiV1Client:** Provides access to TheTVDB V1 APIs which are based on HTTP Get requests with XML based responses. The
 API documentation from TheTVDB can be found
-`HERE <http://www.thetvdb.com/wiki/index.php/Programmers_API#Dynamic_Interfaces>`
+`HERE <http://www.thetvdb.com/wiki/index.php/Programmers_API#Dynamic_Interfaces>`_
 - **ApiV2Client:** Provides access to TheTVDB V2 APIs which are all RESTfull JSON APIs. The API information is very well
-documented `HERE <https://api.thetvdb.com/swagger>`
+documented `HERE <https://api.thetvdb.com/swagger>`_
 
 V1 API Client
 `````````````
@@ -35,7 +35,7 @@ V2 API Client
 The V2 API Client is implemented on class ApiV2Client. Its constructor receives the user identification (api key,
 username and account identified) as required by TheTVDB and optionally the language option.
 
-This client implements method for all the APIs documented in `TheTVDB swagger <https://api.thetvdb.com/swagger>` with
+This client implements method for all the APIs documented in `TheTVDB swagger <https://api.thetvdb.com/swagger>`_ with
 the exception of those that returns information on the parameters required for certain APIs.
 
 The client is very easy to use as provided by the example below:
