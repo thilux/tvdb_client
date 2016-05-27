@@ -66,16 +66,16 @@ with open('README.rst', 'r', 'utf-8') as f:
 #     history = f.read()
 
 setup(
-    name='tx',
+    name='tvdb_client',
     version=version,
-    description='Thilux Network Python Library',
+    description='TheTVDB Client API Library',
     long_description=readme + '\n\n',
     author='Thiago Santana',
     author_email='thilux.systems@gmail.com',
     url='https://github.com/thilux/tvdb_client',
     packages=packages,
     package_data={'': ['LICENSE', 'NOTICE'], 'requests': ['*.pem']},
-    package_dir={'tx_py_network': 'tx_py_network'},
+    package_dir={'tvdb_client': 'tvdb_client'},
     include_package_data=True,
     install_requires=requires,
     license='Apache 2.0',
