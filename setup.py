@@ -48,6 +48,10 @@ if sys.argv[-1] == 'publish':
 
 packages = [
     'tvdb_client',
+    'tvdb_client.clients',
+    'tvdb_client.exceptions',
+    'tvdb_client.tests',
+    'tvdb_client.utils'
 ]
 
 requires = ['requests', 'lxml']
