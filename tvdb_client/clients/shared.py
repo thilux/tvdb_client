@@ -114,8 +114,6 @@ class BaseClient(object):
 
         status_code = raw_response.status_code
 
-        print 'Raw_response=>', raw_response.status_code, ' : ', raw_response.content
-
         error = dict()
         error['client_class'] = self.__class__.__name__
         error['code'] = status_code
