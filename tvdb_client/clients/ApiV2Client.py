@@ -33,6 +33,7 @@ class ApiV2Client(BaseClient):
     def __get_header(self):
         header = dict()
         header['Content-Type'] = 'application/json'
+        header['User-Agent'] = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:47.0) Gecko/20100101 Firefox/47.0'
 
         if self.language:
             header['Accept-Language'] = self.language
