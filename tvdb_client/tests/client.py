@@ -1,5 +1,5 @@
 from unittest import TestCase
-from tvdb_client.clients import ApiV1Client, ApiV2Client
+from tvdb_client.clients import ApiV2Client
 from tvdb_client.exceptions import UserNotLoggedInException
 
 __author__ = 'tsantana'
