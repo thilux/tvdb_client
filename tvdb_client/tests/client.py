@@ -1,6 +1,6 @@
 from unittest import TestCase
 from tvdb_client.clients import ApiV2Client
-from tvdb_client.exceptions import UserNotLoggedInException
+from tvdb_client.exceptions import UserNotLoggedInException, AuthenticationFailedException
 
 __author__ = 'tsantana'
 
@@ -25,7 +25,8 @@ class LoginTestCase(TestCase):
 
     def test_002_02_api_v2_login_invalid_api_key(self):
         api = ApiV2Client('thilux', 'XXXXXXXXXXX', 'F40C8DCCA265D3F3')
-        api.login()
+
+        self.assertRaises(AuthenticationFailedException, api.login)
 
         self.assertFalse(api.is_authenticated)
 
@@ -34,7 +35,7 @@ class LoginTestCase(TestCase):
 
     def test_003_02_api_v2_login_invalid_account_identifier(self):
         api = ApiV2Client('thilux', '463B5371A1FCB382', 'XXIHWDIHWIHIE')
-        api.login()
+        self.assertRaises(AuthenticationFailedException, api.login)
 
         self.assertFalse(api.is_authenticated)
 
@@ -43,7 +44,7 @@ class LoginTestCase(TestCase):
 
     def test_004_02_api_v2_login_invalid_username(self):
         api = ApiV2Client('shambalalalallala', '463B5371A1FCB382', 'F40C8DCCA265D3F3')
-        api.login()
+        self.assertRaises(AuthenticationFailedException, api.login)
 
         self.assertFalse(api.is_authenticated)
 
@@ -75,7 +76,7 @@ class SearchTestCase(TestCase):
         api = ApiV2Client('thilux', '463B5371A1FCB382', 'F40C8DCCA265D3F3', 'en')
         api.login()
 
-        resp = api.search_series(name='Fear the walking dead')
+        resp = api.search_series(name='Man With a Plan')
 
         self.assertIsNotNone(resp)
         self.assertIn('data', resp)
