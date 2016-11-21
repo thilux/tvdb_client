@@ -1,6 +1,9 @@
 tvdb_client: A python client library for the new TVDB API
 =========================================================
 
+.. image:: https://codeship.com/projects/997e1f20-9267-0134-fa6e-42e39fd99f49/status?branch=master
+    :target: https://codeship.com/projects/186115
+
 The tvdb_client provides integration with the TheTVDB API and allows interaction with all of its public APIs in both
 versions: V1 and V2.
 
@@ -16,8 +19,8 @@ awesome `python lxml <https://github.com/lxml/lxml>`_.
 Client Classes
 --------------
 
-- **ApiV1Client:** Provides access to TheTVDB V1 APIs which are based on HTTP Get requests with XML based responses. The API documentation from TheTVDB can be found `HERE <http://www.thetvdb.com/wiki/index.php/Programmers_API#Dynamic_Interfaces>`_.
-- **ApiV2Client:** Provides access to TheTVDB V2 APIs which are all RESTfull JSON APIs. The API information is very well documented `HERE <https://api.thetvdb.com/swagger>`_.
+- **ApiV1Client:** Provides access to TheTVDB V1 APIs which are based on HTTP Get requests with XML based responses. The API documentation from TheTVDB can be found at `API v1 description <http://www.thetvdb.com/wiki/index.php/Programmers_API#Dynamic_Interfaces>`_.
+- **ApiV2Client:** Provides access to TheTVDB V2 APIs which are all RESTfull JSON APIs. The API information is very well documented at `API v2 description <https://api.thetvdb.com/swagger>`_.
 
 V1 API Client
 `````````````
@@ -68,10 +71,4 @@ Contact
 =======
 
 Should you have any questions, suggestions or wishes to contribute, please drop me an email at thilux.systems@gmail.com.
-
-
-
-
-
-
 
