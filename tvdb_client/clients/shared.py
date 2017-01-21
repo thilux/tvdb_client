@@ -2,6 +2,7 @@
 from tvdb_client.exceptions import UserNotLoggedInException
 import abc
 import json
+from tvdb_client.utils.utils import make_str_content
 
 
 __author__ = 'tsantana'
@@ -124,6 +125,6 @@ class BaseClient(object):
     def parse_raw_response(self, raw_response):
 
         if raw_response.status_code == 200:
-            return json.loads(raw_response.content)
+            return json.loads(make_str_content(raw_response.content))
         else:
             return self.__handle_error(raw_response)

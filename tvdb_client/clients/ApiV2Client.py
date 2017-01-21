@@ -1,5 +1,5 @@
 # coding: utf-8
-from shared import BaseClient, authentication_required
+from .shared import BaseClient, authentication_required
 from datetime import datetime, timedelta
 from tvdb_client.utils import requests_util, utils
 from tvdb_client.exceptions import AuthenticationFailedException
@@ -47,7 +47,7 @@ class ApiV2Client(BaseClient):
         resp = requests_util.run_request('get', self.API_BASE_URL + '/refresh_token', headers=headers)
 
         if resp.status_code == 200:
-            token_resp = json.loads(resp.content)
+            token_resp = self.parse_raw_response(resp)
             self.__token = token_resp['token']
             self.__auth_time = datetime.now()
 
@@ -91,7 +91,7 @@ class ApiV2Client(BaseClient):
                                               headers=self.__get_header())
 
         if auth_resp.status_code == 200:
-            auth_resp_data = json.loads(auth_resp.content)
+            auth_resp_data = self.parse_raw_response(auth_resp)
             self.__token = auth_resp_data['token']
             self.__auth_time = datetime.now()
             self.is_authenticated = True

@@ -1,4 +1,4 @@
-
+# encoding=latin-1
 from .clients import ApiV1Client, ApiV2Client
 
 __title__ = 'tvdb_client'

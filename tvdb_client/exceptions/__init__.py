@@ -1,2 +1,2 @@
 
-from tvdb_exceptions import UserNotLoggedInException, AuthenticationFailedException
+from .tvdb_exceptions import UserNotLoggedInException, AuthenticationFailedException

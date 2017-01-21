@@ -1,5 +1,5 @@
 # coding: utf-8
-from shared import BaseClient
+from .shared import BaseClient
 
 __author__ = 'tsantana'
 

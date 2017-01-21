@@ -1,3 +1,4 @@
+# encoding=latin-1
 __author__ = 'tsantana'
 
 
@@ -19,3 +20,14 @@ def query_param_string_from_option_args(a2q_dict, args_dict):
         qs = qs[0:len(qs)-1]
 
     return qs
+
+
+def make_str_content(content):
+    """
+    In python3+ requests.Response.content returns bytes instead of ol'good str.
+    :param content: requests.Response.content
+    :return: str representation of the requests.Response.content data
+    """
+    if not isinstance(content, str):
+        content = str(content.decode())
+    return content
