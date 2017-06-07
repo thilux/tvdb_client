@@ -1,6 +1,7 @@
 # encoding=latin-1
 __author__ = 'tsantana'
 
+import urllib
 
 def query_param_string_from_option_args(a2q_dict, args_dict):
     """
@@ -10,16 +11,13 @@ def query_param_string_from_option_args(a2q_dict, args_dict):
     :return: a query string.
     """
 
-    qs = ''
+    name_value_pairs = dict()
     for ak in a2q_dict.keys():
         value = args_dict[ak]
-        if value:
-            qs += '%s=%s&' % (a2q_dict[ak], str(value))
+        if value != None:
+            name_value_pairs[a2q_dict[ak]] = str(value)
 
-    if len(qs):  # removing lonely & that stays at the end.
-        qs = qs[0:len(qs)-1]
-
-    return qs
+    return urllib.urlencode(name_value_pairs)
 
 
 def make_str_content(content):
