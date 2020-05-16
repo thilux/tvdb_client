@@ -65,6 +65,7 @@ Status and updates
 ==================
 
  * May 2016: Development started and API V2 Client is up for business!
+ * May 2020: Fix to client shared lib (version 0.1.2)
 
 
 Contact
