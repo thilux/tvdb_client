@@ -265,7 +265,7 @@ class ApiV2Client(BaseClient):
         query_string = 'fromTime=%s&%s' % (from_time,
                                            utils.query_param_string_from_option_args(optional_parameters, arguments))
 
-        raw_response = requests_util.run_request('get', self.API_BASE_URL + '/uodated/query?%s' % query_string,
+        raw_response = requests_util.run_request('get', self.API_BASE_URL + '/updated/query?%s' % query_string,
                                                  headers=self.__get_header_with_auth())
 
         return self.parse_raw_response(raw_response)
@@ -342,7 +342,7 @@ class ApiV2Client(BaseClient):
             query_string = 'itemType=%s' % item_type
 
             return self.parse_raw_response(
-                requests_util.run_request('get', self.API_BASE_URL + '/user/ratings/qeury?%s' % query_string,
+                requests_util.run_request('get', self.API_BASE_URL + '/user/ratings/query?%s' % query_string,
                                           headers=self.__get_header_with_auth()))
         else:
             return self.__get_user_ratings()
